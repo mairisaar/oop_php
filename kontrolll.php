@@ -6,6 +6,9 @@
  * Time: 9:26
  */
 
+echo '<html><head><title>Ülesanded</title>
+<link rel="stylesheet" type="text/css" href="katsestyle.css"></head><body>';
+
 // Ülesanne 1
 /* Loo programm, mille sees:
 a) defineeritud muutujate abil
@@ -62,14 +65,14 @@ echo '<hr>';
  */
 
 echo '<h4>Ülesanne 3</h4>';
-echo '<table style="width: 300px; border: 1px solid black; border-collapse: collapse;">';
+echo '<table>';
 $ridadeArv = 6;
 $veergudeArv = 5;
 for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-    echo '<tr style="border: 1px solid black; border-collapse: collapse;">';
+    echo '<tr>';
     for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-        $varv = '#'.B.B.$reaNumber.$veeruNumber.B.B;
-        echo '<td style="border: 1px solid black; border-collapse: collapse; background-color: '.$varv.'">';
+        $varv = '#'.F.E.$reaNumber.$veeruNumber.'0'.'0';
+        echo '<td style="background-color: '.$varv.'">';
         echo $veeruNumber;
         echo '</td>';
     }
@@ -77,3 +80,25 @@ for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
 }
 echo '</table>';
 echo '<hr>';
+
+echo '<table>';
+$ridadeArv = 6;
+$veergudeArv = 5;
+for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
+    echo '<tr>';
+    for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+        $varv = '#';
+        for ($i = 1; $i <= 6; $i++){
+            $varv = $varv.dechex(rand(0, 16));
+        }
+        echo '<td style="background-color: '.$varv.'">';
+        echo $veeruNumber;
+        echo '</td>';
+    }
+    echo '</tr>';
+}
+echo '</table>';
+
+echo '<hr>';
+
+echo '</body></html>';
