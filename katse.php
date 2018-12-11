@@ -38,6 +38,7 @@ echo '
     <html>
         <head>
             <title>' . $lehePealkiri . '</title>
+            <<link rel="stylesheet" href="katsestyle.css">
         </head>
         <body>';
         if($naitaSisu == true){
@@ -66,6 +67,29 @@ echo '
                     echo '<br>';
                     echo 'Sisu on peidetud!';
             }
+
+//tsüklid
+// for
+/*
+ * for($juhtimismuutuja=algväärtus; $juhtimismuutuja < lõppväärtus; $juhtimismuutuja++){
+ * tegevused, mis toimuvad nii kaua kui see tingimus kehtib
+ * }
+ * */
+echo '<br>';
+echo '<table>';
+$ridadeArv = 6;
+$veergudeArv = 5;
+for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
+    echo '<tr>';
+        for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+            echo '<td>';
+            echo $veeruNumber;
+            echo '</td>';
+        }
+    echo '</tr>';
+}
+echo '</table>';
+
 
 // html lehe lõpp
 echo '

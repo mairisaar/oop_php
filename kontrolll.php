@@ -16,13 +16,6 @@ a) defineeritud muutujate abil
 b) Väljastatud muutujate väärtused koos sobiva tekstiga html faili kujul
 */
 
-// Ülesanne 2
-/* Loo muutuja nimega varv, mille algväärtuseks pane 'punane';
-Koosta if-else if- else lause, mis väljastab teksti "Värviline tekst"
-vastavalt määratud väärtusega. Katseta vähemalt kolme HTML värviga -
-red, blue, orange
-*/
-
 //muutujate defineerimine
 $nimi = 'Mairi Saar';
 $kursuseTahis = 'KD18';
@@ -48,15 +41,16 @@ red, blue, orange
 */
 
 echo '<h4>Ülesanne 2</h4>';
-$varv = 'roheline';
+$varv = 'orange';
+echo '<p style="color: ';
 if($varv == 'punane'){
-    echo '<p style="color: red;">Värviline tekst</p>';
+    echo 'red';
 } else if($varv == 'sinine'){
-    echo '<p style="color: blue;">Värviline tekst</p>';
+    echo 'blue';
 } else if($varv == 'orange'){
-    echo '<p style="color: orange;">Värviline tekst</p>';
+    echo 'orange';
 } else {
-    echo '<p>Värviline tekst</p>';
+    echo 'black';
 }
+echo ';">Värviline tekst</p>';
 echo '</body></html>';
-';
