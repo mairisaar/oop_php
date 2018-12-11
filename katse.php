@@ -59,15 +59,14 @@ echo '
             echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
             echo '<br>';
             echo gettype($taisarv);
-            }else {
-                if($naitaPeidetudSisu == true){
+            }else if ($naitaSisu == 1){
                     echo '<br>';
-                    echo 'See on peidetud info.';
-                }else {
+                    echo 'See on tavaline peidetud info.';
+            }else {
                     echo '<br>';
                     echo 'Sisu on peidetud!';
                 }
-        }
+
 // html lehe lõpp
 echo '
         </body>
