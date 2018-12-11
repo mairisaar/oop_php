@@ -7,18 +7,19 @@
  */
 //Muutujate defineerimine
 //$muutujaNimi = väärtus;
-$lehePealkiri = 'Katseleht';
-$sisuPealkiri = 'Muutujate defineerimine';
+/*$lehePealkiri = 'Katseleht';
+*$sisuPealkiri = 'Muutujate defineerimine';
+ */
 //muutujate sisu test vaatamine
-var_dump($lehePealkiri);
+//var_dump($lehePealkiri);
 //andmetüübid
 $taisarv = 7;
 $reaalarv = -2.6;
 $tekst = 'Tere, PHP';
 $tõeväärtusTrue = true;
 $tõeväärtusFalse = false;
-echo '<br>';
-var_dump($sisuPealkiri);
+//echo '<br>';
+//var_dump($sisuPealkiri);
 //väärtuse tüübi kontroll gettype($muutujaNimi)
 //väärtuse tüübi teisendus settype($muutujaNimi, 'tüüp')
 //Näide teksti väljastamisest ekraanile veebiprauseris
@@ -38,7 +39,7 @@ echo '
     <html>
         <head>
             <title>' . $lehePealkiri . '</title>
-            <<link rel="stylesheet" href="katsestyle.css">
+            <link rel="stylesheet" href="katsestyle.css">
         </head>
         <body>';
         if($naitaSisu == true){

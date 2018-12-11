@@ -54,3 +54,26 @@ if($varv == 'punane'){
 }
 echo ';">Värviline tekst</p>';
 echo '</body></html>';
+echo '<hr>';
+
+//Ülesanne 3
+/*
+ * Gradient tabeli ridadele, läheb järjest heledamaks
+ */
+
+echo '<h4>Ülesanne 4</h4>';
+echo '<table style="width: 300px; border: 1px solid black; border-collapse: collapse;">';
+$ridadeArv = 6;
+$veergudeArv = 5;
+for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
+    echo '<tr style="border: 1px solid black; border-collapse: collapse;">';
+    for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+        $varv = '#'.B.B.$reaNumber.$veeruNumber.B.B;
+        echo '<td style="border: 1px solid black; border-collapse: collapse; background-color: '.$varv.'">';
+        echo $veeruNumber;
+        echo '</td>';
+    }
+    echo '</tr>';
+}
+echo '</table>';
+echo '<hr>';
