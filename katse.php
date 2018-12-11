@@ -32,6 +32,7 @@ var_dump($sisuPealkiri);
  * }
  * */
 $naitaSisu = true;
+$naitaPeidetudSisu = true;
 echo '
     <!DOCTYPE html>
     <html>
@@ -39,7 +40,7 @@ echo '
             <title>' . $lehePealkiri . '</title>
         </head>
         <body>';
-        if($naitaSisu == true){
+        if($naitaSisu == false){
         //sisu väljastamine
         echo '  <h1>' . $sisuPealkiri . '</h1>
             <h3>Andmetüübid</h3>
@@ -58,7 +59,15 @@ echo '
             echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
             echo '<br>';
             echo gettype($taisarv);
-            }
+            }else {
+                if($naitaPeidetudSisu == true){
+                    echo '<br>';
+                    echo 'See on peidetud info.';
+                }else {
+                    echo '<br>';
+                    echo 'Sisu on peidetud!';
+                }
+        }
 // html lehe lõpp
 echo '
         </body>
