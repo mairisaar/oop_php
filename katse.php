@@ -31,7 +31,7 @@ var_dump($sisuPealkiri);
  *         muidu toimub see osa
  * }
  * */
-$naitaSisu = true;
+$naitaSisu = false;
 $naitaPeidetudSisu = true;
 echo '
     <!DOCTYPE html>
@@ -40,7 +40,7 @@ echo '
             <title>' . $lehePealkiri . '</title>
         </head>
         <body>';
-        if($naitaSisu == false){
+        if($naitaSisu == true){
         //sisu väljastamine
         echo '  <h1>' . $sisuPealkiri . '</h1>
             <h3>Andmetüübid</h3>
@@ -65,7 +65,7 @@ echo '
             }else {
                     echo '<br>';
                     echo 'Sisu on peidetud!';
-                }
+            }
 
 // html lehe lõpp
 echo '
