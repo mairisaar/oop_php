@@ -18,7 +18,7 @@ b) Väljastatud muutujate väärtused koos sobiva tekstiga html faili kujul
 
 //muutujate defineerimine
 $nimi = 'Mairi Saar';
-$kursuseTähis = 'KD18';
+$kursuseTahis = 'KD18';
 $kursuseNumber = '1.';
 $kooliEmail = 'mairi.saar@khk.ee';
 
@@ -31,7 +31,7 @@ echo '
     </head>
     <body>
         <p>Minu nimi on '. $nimi. '</p>
-        <p>Minu kursuse tähis Tartu Kutsehariduskeskuses on '. $kursuseTähis. '</p>
+        <p>Minu kursuse tähis Tartu Kutsehariduskeskuses on '. $kursuseTahis. '</p>
         <p>Õpin '. $kursuseNumber. ' kursusel.</p>
         <p>Minu kooli e-posti aadress on '. $kooliEmail. '</p>
 

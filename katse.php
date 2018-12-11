@@ -23,14 +23,25 @@ var_dump($sisuPealkiri);
 //väärtuse tüübi teisendus settype($muutujaNimi, 'tüüp')
 //Näide teksti väljastamisest ekraanile veebiprauseris
 //Ühendamine toimub 'tekst katkeb '.$muutujaNimi.' tekst jätkub'
+//tingimuslause
+/*
+ * if (tingimus == true) {
+ *         siis toimub see osa
+ * }else {
+ *         muidu toimub see osa
+ * }
+ * */
+$naitaSisu = true;
 echo '
     <!DOCTYPE html>
     <html>
         <head>
             <title>' . $lehePealkiri . '</title>
         </head>
-        <body>
-            <h1>' . $sisuPealkiri . '</h1>
+        <body>';
+        if($naitaSisu == true){
+        //sisu väljastamine
+        echo '  <h1>' . $sisuPealkiri . '</h1>
             <h3>Andmetüübid</h3>
             <ul>
                 <li>$taisarv = ' . $taisarv . ' - ' . gettype($taisarv) . '</li>
@@ -38,17 +49,18 @@ echo '
                 <li>$tekst = ' . $tekst . ' - ' . gettype($tekst) . '</li>
                 <li>$tõeväärtusTrue = ' . $tõeväärtusTrue . ' - ' . gettype($tõeväärtusTrue) . '</li>
                 <li>$tõeväärtusFalse = ' . $tõeväärtusFalse . ' - ' . gettype($tõeväärtusFalse) . '</li>
-            </ul>
+            </ul>'
             ;
-//tüübi teisendamine
-echo $taisarv.\' + \'.$taisarv.\' = \'.($taisarv + $taisarv);
-echo \'<br>\';
-settype($taisarv, \'string\');
-echo $taisarv.\' + \'.$taisarv.\' = \'.($taisarv + $taisarv);
-echo \'<br>\';
-echo gettype($taisarv);
+            //tüübi teisendamine
+            echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
+            echo '<br>';
+            settype($taisarv,'string');
+            echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
+            echo '<br>';
+            echo gettype($taisarv);
+            }
 // html lehe lõpp
-echo \'
+echo '
         </body>
     </html>
 ';
