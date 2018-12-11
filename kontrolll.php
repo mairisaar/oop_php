@@ -61,7 +61,7 @@ echo '<hr>';
  * Gradient tabeli ridadele, läheb järjest heledamaks
  */
 
-echo '<h4>Ülesanne 4</h4>';
+echo '<h4>Ülesanne 3</h4>';
 echo '<table style="width: 300px; border: 1px solid black; border-collapse: collapse;">';
 $ridadeArv = 6;
 $veergudeArv = 5;
