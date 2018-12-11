@@ -24,16 +24,16 @@ $kooliEmail = 'mairi.saar@khk.ee';
 
 echo '
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="et">
     <head>
         <meta charset="UTF-8" />
-        <title>Document</title>
+        <title>Kontroll</title>
     </head>
     <body>
-        <p>$nimi = '. $nimi. '</p>
-        <p>$kursuseTähis = '. $kursuseTähis. '</p>
-        <p>$kursuseNumber = '. $kursuseNumber. '</p>
-        <p>$kooliEmail = '. $kooliEmail. '</p>
+        <p>Minu nimi on '. $nimi. '</p>
+        <p>Minu kursuse tähis Tartu Kutsehariduskeskuses on '. $kursuseTähis. '</p>
+        <p>Õpin '. $kursuseNumber. ' kursusel.</p>
+        <p>Minu kooli e-posti aadress on '. $kooliEmail. '</p>
 
     </body>
     </html>
