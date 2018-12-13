@@ -7,6 +7,7 @@
  */
 //Loeme sisse Tabel.php faili sisu
 require_once './Tabel.php';
+require_once 'HTMLtabel.php';
 // loome tabeli objekti
 
 $lihttabel = new Tabel();
@@ -29,13 +30,12 @@ $lihttabel->lisaRida(array(7, 8, 9));
 //väljastamine
 $lihttabel->naitaTabel();
 
-//testväljastus
-
-var_dump($lihttabel);
 echo '<hr>';
 
-echo '<pre>';
-print_r($lihttabel);
-echo '</pre>';
+$htmlTabel = new HTMLtabel();
 
-echo '<hr>';
+$htmlTabel->lisaRida(array(1, 2, 3));
+$htmlTabel->lisaRida(array(4, 5, 6));
+$htmlTabel->lisaRida(array(7, 8, 9));
+
+$htmlTabel->naitaTabel();

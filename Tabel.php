@@ -14,6 +14,14 @@ class Tabel
 //klassi meetodid
 
     /**
+     * Tabel constructor.
+     */
+    public function __construct()
+    {
+        echo 'Tabel tüüpi objekt on loodud<br>';
+    }
+
+    /**
      * @param $rida = massiiv rea elementidega
      */
     function lisaRida($rida){
