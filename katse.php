@@ -96,16 +96,18 @@ echo '
 //funktsiooni kasutamine
 echo 'Tabelid funktsiooniga htmlTabel()';
 echo '<br>';
-echo '---';
-echo '<br>';
 htmlTabel(4, 6);
 echo '<hr>';
 htmlTabel(3, 2);
 echo '<hr>';
 // vaikimisi parameetritega tabel
+echo 'Tabelid funktsiooniga htmlTabel(), kasutatakse funktsiooni vaikimisi väärtuseid 0 rida ja 0 veergu';
+echo '<br>';
 htmlTabel();
 echo '<hr>';
 //tagastamisega funktsiooniga tabel
+echo 'Tabelid funktsiooniga htmlTabelTagasta()';
+echo '<br>';
 $tabel1 = htmlTabelTagasta(4, 4);
 echo $tabel1;
 
