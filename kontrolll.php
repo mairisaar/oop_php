@@ -120,6 +120,7 @@ $symbolid = array(
     array(d, e, f)
 );
 
+//for
 function htmlTabel ($massiiv) {
     echo '<table>';
     for($reaNumber = 0; $reaNumber < count($massiiv); $reaNumber++){
@@ -134,6 +135,7 @@ function htmlTabel ($massiiv) {
     echo '</table>';
 }
 
+//foreach
 function htmlTabelFE($massiiv){
     echo '<table>';
     foreach($massiiv as $rida){
