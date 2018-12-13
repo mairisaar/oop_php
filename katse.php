@@ -39,12 +39,22 @@
  * }
  * */
 
-//funktsioonid
+//massiivid
 /*
- * function funktsiooniNimi ($param1, $param2, ... , $paramn){
- * kõik tegevused, mis peavad funktsiooni sisus toimuma
- * }
- * */
+ * $massiiv = array(); //tühi massiiv
+ * $massiiv[] = väärtus; //et lisada massiivi väärtuseid
+ */
+$nimed = array();
+$nimed[] = 'Anna';
+$nimed[] = 'Mairi';
+var_dump($nimed);
+echo '<pre>';
+print_r($nimed);
+echo '</pre>';
+echo '<br>';
+
+
+
 
 //funktsiooni kirjeldamine
 //saab lisada vaikimisi parameetrid, need saab üle kirjutada andes funktsioonile välja kutsudes kaasa uued väärtused
@@ -92,7 +102,6 @@ echo '
 
 
 
-
 //funktsiooni kasutamine
 echo 'Tabelid funktsiooniga htmlTabel()';
 echo '<br>';
@@ -110,7 +119,7 @@ echo 'Tabelid funktsiooniga htmlTabelTagasta()';
 echo '<br>';
 $tabel1 = htmlTabelTagasta(4, 4);
 echo $tabel1;
-
+echo '<hr>';
 
 // html lehe lõpp
 echo '
