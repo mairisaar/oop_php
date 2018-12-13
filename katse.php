@@ -7,9 +7,11 @@
  */
 //Muutujate defineerimine
 //$muutujaNimi = väärtus;
+
 /*$lehePealkiri = 'Katseleht';
 *$sisuPealkiri = 'Muutujate defineerimine';
  */
+
 //muutujate sisu test vaatamine
 //var_dump($lehePealkiri);
 //andmetüübid
@@ -21,6 +23,14 @@
 //Näide teksti väljastamisest ekraanile veebiprauseris
 //Ühendamine toimub 'tekst katkeb '.$muutujaNimi.' tekst jätkub'
 
+//tingimuslause
+/*
+ * if (tingimus == true) {
+ *         siis toimub see osa
+ * }else {
+ *         muidu toimub see osa
+ * }
+ * */
 
 //funktsioonid
 /*
@@ -37,9 +47,9 @@
  * */
 
 //funktsiooni kirjeldamine
-function htmlTabel ($ridadeArv, $veergudeArv) {
+//saab lisada vaikimisi parameetrid, need saab üle kirjutada andes funktsioonile välja kutsudes kaasa uued väärtused
+function htmlTabel ($ridadeArv = 0, $veergudeArv = 0) {
     echo '<table>';
-
     for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
         echo '<tr>';
         for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
@@ -53,14 +63,7 @@ function htmlTabel ($ridadeArv, $veergudeArv) {
 }
 
 
-//tingimuslause
-/*
- * if (tingimus == true) {
- *         siis toimub see osa
- * }else {
- *         muidu toimub see osa
- * }
- * */
+
 $naitaSisu = false;
 $naitaPeidetudSisu = true;
 echo '
@@ -76,14 +79,15 @@ echo '
 
 
 //funktsiooni kasutamine
-echo 'Tabel funktsiooniga htmlTabel()';
+echo 'Tabelid funktsiooniga htmlTabel()';
 echo '<br>';
 echo '---';
 echo '<br>';
 htmlTabel(4, 6);
 echo '<hr>';
-htmlTabel(3, 5);
-
+htmlTabel(3, 2);
+echo '<hr>';
+htmlTabel();
 
 
 // html lehe lõpp
