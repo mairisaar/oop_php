@@ -13,11 +13,7 @@
 //muutujate sisu test vaatamine
 //var_dump($lehePealkiri);
 //andmetüübid
-$taisarv = 7;
-$reaalarv = -2.6;
-$tekst = 'Tere, PHP';
-$tõeväärtusTrue = true;
-$tõeväärtusFalse = false;
+
 //echo '<br>';
 //var_dump($sisuPealkiri);
 //väärtuse tüübi kontroll gettype($muutujaNimi)
@@ -33,11 +29,17 @@ $tõeväärtusFalse = false;
  * }
  * */
 
+//funktsioonid
+/*
+ * function funktsiooniNimi ($param1, $param2, ... , $paramn){
+ * kõik tegevused, mis peavad funktsiooni sisus toimuma
+ * }
+ * */
+
 //funktsiooni kirjeldamine
-function htmlTabel () {
+function htmlTabel ($ridadeArv, $veergudeArv) {
     echo '<table>';
-    $ridadeArv = 6;
-    $veergudeArv = 5;
+
     for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
         echo '<tr>';
         for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
@@ -65,7 +67,7 @@ echo '
     <!DOCTYPE html>
     <html>
         <head>
-            <title>' . $lehePealkiri . '</title>
+            <title>' . Funktsioon. '</title>
             <link rel="stylesheet" href="katsestyle.css">
         </head>
         <body>';
@@ -73,21 +75,14 @@ echo '
 
 
 
-//funktsioonid
-/*
- * function funktsiooniNimi ($param1, $param2, ... , $paramn){
- * kõik tegevused, mis peavad funktsiooni sisus toimuma
- * }
- * */
-
-
 //funktsiooni kasutamine
 echo 'Tabel funktsiooniga htmlTabel()';
 echo '<br>';
 echo '---';
 echo '<br>';
-htmlTabel();
-echo '<br>';
+htmlTabel(4, 6);
+echo '<hr>';
+htmlTabel(3, 5);
 
 
 
