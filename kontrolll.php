@@ -101,4 +101,60 @@ echo '</table>';
 
 echo '<hr>';
 
+//Ülesanne4
+
+/*
+ * Ümber kirjutada tabeli funktsioon nii, et tabeli sisu/info väljastataks massiivist
+ */
+
+echo '<h4>Ülesanne 4</h4>';
+
+$numbrid = array(
+    array(1, 2, 3, 4, 5),
+    array(6, 7, 8, 9, 10),
+    array(11, 12, 13, 14, 15),
+);
+
+$symbolid = array(
+    array(a, b, c),
+    array(d, e, f)
+);
+
+function htmlTabel ($massiiv) {
+    echo '<table>';
+    for($reaNumber = 0; $reaNumber < count($massiiv); $reaNumber++){
+        echo '<tr>';
+        for($veeruNumber = 0; $veeruNumber < count($massiiv[$reaNumber]); $veeruNumber++) {
+            echo '<td>';
+            echo $massiiv[$reaNumber][$veeruNumber];
+            echo '</td>';
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
+}
+
+function htmlTabelFE($massiiv){
+    echo '<table>';
+    foreach($massiiv as $rida){
+        echo '<tr>';
+        foreach($rida as $element) {
+            echo '<td>';
+            echo $element;
+            echo '</td>';
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
+}
+
+htmlTabel($numbrid);
+
+echo '<hr>';
+
+htmlTabelFE($symbolid);
+
+echo '<hr>';
+
 echo '</body></html>';
+
