@@ -62,6 +62,21 @@ function htmlTabel ($ridadeArv = 0, $veergudeArv = 0) {
     echo '</table>';
 }
 
+//tagastamisega funktsioon
+function htmlTabelTagasta ($ridadeArv = 0, $veergudeArv = 0) {
+    $tabel = '<table>';
+    for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
+        $tabel = $tabel.'<tr>';
+        for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+            $tabel = $tabel.'<td>';
+            $tabel = $tabel.$veeruNumber;
+            $tabel = $tabel.'</td>';
+        }
+        $tabel = $tabel.'</tr>';
+    }
+    $tabel = $tabel.'</table>';
+    return $tabel;
+}
 
 
 $naitaSisu = false;
@@ -87,7 +102,12 @@ htmlTabel(4, 6);
 echo '<hr>';
 htmlTabel(3, 2);
 echo '<hr>';
+// vaikimisi parameetritega tabel
 htmlTabel();
+echo '<hr>';
+//tagastamisega funktsiooniga tabel
+$tabel1 = htmlTabelTagasta(4, 4);
+echo $tabel1;
 
 
 // html lehe lõpp
