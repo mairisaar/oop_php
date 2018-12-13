@@ -47,12 +47,55 @@
 $nimed = array();
 $nimed[] = 'Anna';
 $nimed[] = 'Mairi';
+// kaks võimalust vaadata massiivi sisu
+//var_dump
 var_dump($nimed);
+//print_r
 echo '<pre>';
 print_r($nimed);
 echo '</pre>';
+
+echo '<br>';
+echo '<hr>';
+
+//massiivi loomine
+$numbrid = array(
+    array(1, 2, 3),
+    array(4, 5, 6),
+);
+
+//massiivi sisu test kontroll
+var_dump($numbrid);
+
+echo '<pre>';
+print_r($numbrid);
+echo '</pre>';
+
 echo '<br>';
 
+//massiivi elemendi väljastamine
+echo $numbrid[1][1];
+
+echo '<br>';
+//massiivi suuruse kontroll - ridade arv
+$ridadeArv = count($numbrid);
+echo $ridadeArv;
+
+echo '<br>';
+//massiivi suuruse kontroll - veergude arv
+$veergudeArv = count($numbrid[0]);
+echo $veergudeArv;
+
+echo '<br>';
+//massiivi väljastamin for tsükliga
+for($reaNumber = 0; $reaNumber < $ridadeArv; $reaNumber++){
+    for($veeruNumber = 0; $veeruNumber < $veergudeArv; $veeruNumber++){
+        echo $numbrid[$reaNumber][$veeruNumber].'&nbsp';
+    }
+    echo '<br>';
+}
+
+echo '<hr>';
 
 
 
