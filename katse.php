@@ -88,12 +88,23 @@ echo $veergudeArv;
 
 echo '<br>';
 //massiivi väljastamin for tsükliga
+//'&nbsp' on tühik
 for($reaNumber = 0; $reaNumber < $ridadeArv; $reaNumber++){
     for($veeruNumber = 0; $veeruNumber < $veergudeArv; $veeruNumber++){
         echo $numbrid[$reaNumber][$veeruNumber].'&nbsp';
     }
     echo '<br>';
 }
+echo '<br>';
+//massiivi väljastamine foreach abil
+foreach ($numbrid as $rida){
+    foreach ($rida as $number){
+        echo $number.'&nbsp';
+    }
+    echo '<br>';
+}
+
+
 
 echo '<hr>';
 
