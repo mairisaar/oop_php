@@ -24,6 +24,33 @@ $tõeväärtusFalse = false;
 //väärtuse tüübi teisendus settype($muutujaNimi, 'tüüp')
 //Näide teksti väljastamisest ekraanile veebiprauseris
 //Ühendamine toimub 'tekst katkeb '.$muutujaNimi.' tekst jätkub'
+
+
+//funktsioonid
+/*
+ * function funktsiooniNimi ($param1, $param2, ... , $paramn){
+ * kõik tegevused, mis peavad funktsiooni sisus toimuma
+ * }
+ * */
+
+//funktsiooni kirjeldamine
+function htmlTabel () {
+    echo '<table>';
+    $ridadeArv = 6;
+    $veergudeArv = 5;
+    for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
+        echo '<tr>';
+        for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+            echo '<td>';
+            echo $veeruNumber;
+            echo '</td>';
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
+}
+
+
 //tingimuslause
 /*
  * if (tingimus == true) {
@@ -42,54 +69,26 @@ echo '
             <link rel="stylesheet" href="katsestyle.css">
         </head>
         <body>';
-        if($naitaSisu == true){
-        //sisu väljastamine
-        echo '  <h1>' . $sisuPealkiri . '</h1>
-            <h3>Andmetüübid</h3>
-            <ul>
-                <li>$taisarv = ' . $taisarv . ' - ' . gettype($taisarv) . '</li>
-                <li>$reaalarv = ' . $reaalarv . ' - ' . gettype($reaalarv) . '</li>
-                <li>$tekst = ' . $tekst . ' - ' . gettype($tekst) . '</li>
-                <li>$tõeväärtusTrue = ' . $tõeväärtusTrue . ' - ' . gettype($tõeväärtusTrue) . '</li>
-                <li>$tõeväärtusFalse = ' . $tõeväärtusFalse . ' - ' . gettype($tõeväärtusFalse) . '</li>
-            </ul>'
-            ;
-            //tüübi teisendamine
-            echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
-            echo '<br>';
-            settype($taisarv,'string');
-            echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
-            echo '<br>';
-            echo gettype($taisarv);
-            }else if ($naitaSisu == 1){
-                    echo '<br>';
-                    echo 'See on tavaline peidetud info.';
-            }else {
-                    echo '<br>';
-                    echo 'Sisu on peidetud!';
-            }
 
-//tsüklid
-// for
+
+
+
+//funktsioonid
 /*
- * for($juhtimismuutuja=algväärtus; $juhtimismuutuja < lõppväärtus; $juhtimismuutuja++){
- * tegevused, mis toimuvad nii kaua kui see tingimus kehtib
+ * function funktsiooniNimi ($param1, $param2, ... , $paramn){
+ * kõik tegevused, mis peavad funktsiooni sisus toimuma
  * }
  * */
+
+
+//funktsiooni kasutamine
+echo 'Tabel funktsiooniga htmlTabel()';
 echo '<br>';
-echo '<table>';
-$ridadeArv = 6;
-$veergudeArv = 5;
-for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-    echo '<tr>';
-        for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-            echo '<td>';
-            echo $veeruNumber;
-            echo '</td>';
-        }
-    echo '</tr>';
-}
-echo '</table>';
+echo '---';
+echo '<br>';
+htmlTabel();
+echo '<br>';
+
 
 
 // html lehe lõpp
