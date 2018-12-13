@@ -15,17 +15,20 @@ class Tabel
 
     /**
      * @param $rida = massiiv rea elementidega
-     * ja väljasta iga rea sees olev element tühikuga eraldades
-     * read eralda reavahetusega
      */
     function lisaRida($rida){
         $this->tabel[] = $rida;
     }
+    /*
+     * vaatab tabeli massiivi foreach
+     * ja väljasta iga rea sees olev element tühikuga eraldades
+     * read eralda reavahetusega
+     * */
 
     function naitaTabel(){
         foreach ($this->tabel as $rida){
             foreach ($rida as $element){
-                echo $element.'<&nbsp;';
+                echo $element.'&nbsp;';
             }
             echo '<br>';
         }
