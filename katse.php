@@ -49,18 +49,21 @@ $nimed[] = 'Anna';
 $nimed[] = 'Mairi';
 // kaks võimalust vaadata massiivi sisu
 //var_dump
-var_dump($nimed);
+var_dump($perekondPepa);
 //print_r
 echo '<pre>';
-print_r($nimed);
+print_r($perekondPepa);
 echo '</pre>';
 
 echo '<br>';
 echo '<hr>';
 
 function valjastaInfo($massiiv) {
-    foreach ($massiiv as $elemendiNimi => $elemendiVaartus){
-        echo $elemendiNimi.' - '.$elemendiVaartus.'<br>';
+    foreach ($massiiv as $alamMassiiv){
+        foreach ($alamMassiiv as $elemendiNimi => $elemendiVaartus){
+            echo $elemendiNimi.' - '.$elemendiVaartus.'<br>';
+        }
+        echo '<hr>';
     }
 }
 
@@ -68,7 +71,10 @@ function valjastaInfo($massiiv) {
 $porsasPepa = array('nimi'=>'Pepa', 'amet'=>'põrsaslaps', 'vanus'=>5, 'sugu'=>'naine');
 $porsasGeorge = array('nimi'=>'George', 'amet'=>'põrsaslaps', 'vanus'=>2, 'sugu'=>'mees');
 
-
+$perekondPepa = array(
+    array('nimi'=>'Pepa', 'amet'=>'põrsaslaps', 'vanus'=>5, 'sugu'=>'naine'),
+    array('nimi'=>'George', 'amet'=>'põrsaslaps', 'vanus'=>2, 'sugu'=>'mees')
+);
 
 
 echo '<hr>';
@@ -85,9 +91,9 @@ echo '
         <body>';
 
 
-valjastaInfo($porsasPepa);
+valjastaInfo($perekondPepa);
 echo '<hr>';
-valjastaInfo($porsasGeorge);
+
 
 
 // html lehe lõpp
