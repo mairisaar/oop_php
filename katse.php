@@ -34,12 +34,6 @@ if(empty($_POST)){
 };
 
 
-
-
-
-
-
-
 echo '
     <!DOCTYPE html>
     <html>
@@ -49,12 +43,7 @@ echo '
         </head>
         <body>';
 
-
-
-
 echo '<hr>';
-
-
 
 
 // html lehe lõpp
@@ -62,6 +51,5 @@ echo '
         </body>
     </html>
 ';
-
 
 ?>
