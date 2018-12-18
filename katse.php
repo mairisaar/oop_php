@@ -15,11 +15,11 @@
 
 // kaks võimalust vaadata massiivi sisu
 //var_dump
-var_dump($perekondPepa);
+//var_dump($perekondPeppa);
 //print_r
-echo '<pre>';
-print_r($perekondPepa);
-echo '</pre>';
+//echo '<pre>';
+//print_r($perekondPeppa);
+//echo '</pre>';
 
 echo '<br>';
 echo '<hr>';
@@ -48,31 +48,64 @@ function valjastaInfo($massiiv) {
     }
 }
 
+//katse sorteerida soo järgi
+//function suguVordlus($a, $b){
+//    if($aSugu == $bSugu) {
+//        return 0;
+//    }return($aSugu < $bSugu) ? -1 : 1;
+//}
+
+function suguVordlus($a, $b){
+    if($a['sugu'] == $b['sugu']) {
+        return 0;
+    }return($a['sugu'] < $b['sugu']) ? -1 : 1;
+}
+//seda ei ole tegelikult üldse vaja
+function sortSooJargi ($massiiv){
+    usort($massiiv,'suguVordlus');
+}
+
 //massiivi loomine
 //ühemõõtmelised massiivid
 $porsasPeppa = array('nimi'=>'Peppa', 'amet'=>'põrsaslaps', 'vanus'=>5, 'sugu'=>'naine');
 $porsasGeorge = array('nimi'=>'George', 'amet'=>'põrsaslaps', 'vanus'=>2, 'sugu'=>'mees');
 
 //mitmemõõtmeline massiiv
-$perekondPepa = array(
+$perekondPeppa = array(
     'Peppa' => array(
         'nimi'=>'Pepa',
-        'amet'=>'põrsaslaps',
+        'amet'=>'põrsalaps',
         'vanus'=>5,
         'sugu'=>'naine'
     ),
     'George' => array(
         'nimi'=>'George',
-        'amet'=>'põrsaslaps',
+        'amet'=>'põrsalaps',
         'vanus'=>2,
         'sugu'=>'mees'
-    )
+    ),
+    'Põrsaema' => array(
+        'nimi'=>'Ema',
+        'amet'=>'põrsaema',
+        'vanus'=>35,
+        'sugu'=>'naine'
+    ),
+    'Põrsaisa' => array(
+        'nimi'=>'Isa',
+        'amet'=>'põrsaisa',
+        'vanus'=>40,
+        'sugu'=>'mees'
+    ),
 );
 
 
 echo '<hr>';
+//sort($perekondPeppa);
+//asort($perekondPeppa);
+//ksort($perekondPeppa);
+//sortSooJargi($perekondPeppa);
 
-
+uasort($perekondPeppa,'suguVordlus');
 
 echo '
     <!DOCTYPE html>
@@ -84,8 +117,9 @@ echo '
         <body>';
 
 
-valjastaInfo($perekondPepa);
+valjastaInfo($perekondPeppa);
 echo '<hr>';
+
 
 
 
