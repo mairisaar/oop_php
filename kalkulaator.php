@@ -1,3 +1,41 @@
+<style>
+
+    form {
+        margin: 100px;
+        padding: 30px;
+        width: 500px;
+        text-align: center;
+        border: solid 1px forestgreen;
+        background-color: darkseagreen;
+    }
+
+    label, input {
+        font-family: Helvetica, SansSerif;
+    }
+
+    input {
+        width: 50px;
+        margin-left: 10px;
+    }
+
+    .button {
+        width: 100px;
+        margin-top: 30px;
+    }
+
+    label {
+        line-height: 200%;
+    }
+
+    .num {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+</style>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -8,15 +46,17 @@
 
 function vorm(){
     echo '<form method="post" action="'.$_SERVER['PHP_SELF'].'">
-    <div>
-        <label>Esimene arv :</label>
-        <input type="number" name="first">
+    <div class="num">
+        <div>
+            <label>Esimene arv :</label>
+            <input type="number" name="first">
+        </div>
+        <div>
+            <label>Teine arv :</label>
+            <input type="number" name="second">
+        </div>
     </div>
-    <div>
-        <label>Teine arv :</label>
-        <input type="number" name="second">
-    </div>
-    <input type="submit" name="Saada!">
+    <input class="button" type="submit" name="saada" value="Liida">
 </form>';
 }
 
@@ -29,15 +69,17 @@ if(empty($_POST)){
 }else {
     foreach ($_POST as $elment){
         if (empty($elment)){
-            echo 'Sisesta arvud!<br>';
+            echo 'Liitmiseks sisesta arvud!<br>';
             echo '<a href="kalkulaator.php">Proovi uuesti!</a>';
             exit;
         }
     }
     echo 'Esimene arv = ' . $_POST['first'] . '<br>';
-    echo 'teine arv = ' . $_POST['second'] . '<br>';
+    echo 'Teine arv = ' . $_POST['second'] . '<br>';
 
     echo '<hr>';
 
     echo 'Arvude summa: ' . $_POST['first']. ' + '.$_POST['second'] . ' = '.summa($_POST['first'], $_POST['second']).'<br>';
+
+    echo '<a href="kalkulaator.php">Proovi uuesti!</a>';
 };
