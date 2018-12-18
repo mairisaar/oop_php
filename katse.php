@@ -24,14 +24,25 @@ echo '</pre>';
 echo '<br>';
 echo '<hr>';
 
+function suguVarv($sugu){
+    if ($sugu == 'naine'){
+        echo '<div style="color: red">';
+    }else {
+        echo '<div style="color: blue">';
+    }
+}
+
+
 //fuktsiooni kirjeldus
 function valjastaInfo($massiiv) {
     foreach ($massiiv as $alamMassiiviNimi => $alamMassiiviAndmed){
+        suguVarv($alamMassiiviAndmed['sugu']);
         echo '<b>'.$alamMassiiviNimi.'</b>';
         echo '<br>';
         echo '<br>';
         foreach ($alamMassiiviAndmed as $elemendiNimi => $elemendiVaartus){
-            echo $elemendiNimi.' - '.$elemendiVaartus.'<br>';
+            suguVarv($alamMassiiviAndmed['sugu']);
+            echo $elemendiNimi.' - '.$elemendiVaartus.'</div>';
         }
         echo '<hr>';
     }
