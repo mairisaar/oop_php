@@ -52,11 +52,19 @@ function vorm(){
             <input type="number" name="first">
         </div>
         <div>
+            <select name="tehe">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select>       
+        </div>
+        <div>
             <label>Teine arv :</label>
             <input type="number" name="second">
         </div>
     </div>
-    <input class="button" type="submit" name="saada" value="Liida">
+    <input class="button" type="submit" name="saada" value="Arvuta">
 </form>';
 }
 
