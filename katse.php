@@ -58,51 +58,16 @@ echo '</pre>';
 echo '<br>';
 echo '<hr>';
 
+function valjastaInfo($massiiv) {
+    foreach ($massiiv as $elemendiNimi => $elemendiVaartus){
+        echo $elemendiNimi.' - '.$elemendiVaartus.'<br>';
+    }
+}
+
 //massiivi loomine
-$numbrid = array(
-    array(1, 2, 3),
-    array(4, 5, 6),
-);
+$porsasPepa = array('nimi'=>'Pepa', 'amet'=>'põrsaslaps', 'vanus'=>5, 'sugu'=>'naine');
+$porsasGeorge = array('nimi'=>'George', 'amet'=>'põrsaslaps', 'vanus'=>2, 'sugu'=>'mees');
 
-//massiivi sisu test kontroll
-var_dump($numbrid);
-
-echo '<pre>';
-print_r($numbrid);
-echo '</pre>';
-
-echo '<br>';
-
-//massiivi elemendi väljastamine
-echo $numbrid[1][1];
-
-echo '<br>';
-//massiivi suuruse kontroll - ridade arv
-$ridadeArv = count($numbrid);
-echo $ridadeArv;
-
-echo '<br>';
-//massiivi suuruse kontroll - veergude arv
-$veergudeArv = count($numbrid[0]);
-echo $veergudeArv;
-
-echo '<br>';
-//massiivi väljastamin for tsükliga
-//'&nbsp' on tühik
-for($reaNumber = 0; $reaNumber < $ridadeArv; $reaNumber++){
-    for($veeruNumber = 0; $veeruNumber < $veergudeArv; $veeruNumber++){
-        echo $numbrid[$reaNumber][$veeruNumber].'&nbsp';
-    }
-    echo '<br>';
-}
-echo '<br>';
-//massiivi väljastamine foreach abil
-foreach ($numbrid as $rida){
-    foreach ($rida as $number){
-        echo $number.'&nbsp';
-    }
-    echo '<br>';
-}
 
 
 
@@ -110,70 +75,20 @@ echo '<hr>';
 
 
 
-//funktsiooni kirjeldamine
-//saab lisada vaikimisi parameetrid, need saab üle kirjutada andes funktsioonile välja kutsudes kaasa uued väärtused
-function htmlTabel ($ridadeArv = 0, $veergudeArv = 0) {
-    echo '<table>';
-    for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-        echo '<tr>';
-        for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-            echo '<td>';
-            echo $veeruNumber;
-            echo '</td>';
-        }
-        echo '</tr>';
-    }
-    echo '</table>';
-}
-
-//tagastamisega funktsioon
-function htmlTabelTagasta ($ridadeArv = 0, $veergudeArv = 0) {
-    $tabel = '<table>';
-    for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-        $tabel = $tabel.'<tr>';
-        for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-            $tabel = $tabel.'<td>';
-            $tabel = $tabel.$veeruNumber;
-            $tabel = $tabel.'</td>';
-        }
-        $tabel = $tabel.'</tr>';
-    }
-    $tabel = $tabel.'</table>';
-    return $tabel;
-}
-
-
-$naitaSisu = false;
-$naitaPeidetudSisu = true;
 echo '
     <!DOCTYPE html>
     <html>
         <head>
-            <title>' . Funktsioon. '</title>
+            <title>' . 'Massiiv'. '</title>
             <link rel="stylesheet" href="katsestyle.css">
         </head>
         <body>';
 
 
+valjastaInfo($porsasPepa);
+echo '<hr>';
+valjastaInfo($porsasGeorge);
 
-//funktsiooni kasutamine
-echo 'Tabelid funktsiooniga htmlTabel()';
-echo '<br>';
-htmlTabel(4, 6);
-echo '<hr>';
-htmlTabel(3, 2);
-echo '<hr>';
-// vaikimisi parameetritega tabel
-echo 'Tabelid funktsiooniga htmlTabel(), kasutatakse funktsiooni vaikimisi väärtuseid 0 rida ja 0 veergu';
-echo '<br>';
-htmlTabel();
-echo '<hr>';
-//tagastamisega funktsiooniga tabel
-echo 'Tabelid funktsiooniga htmlTabelTagasta()';
-echo '<br>';
-$tabel1 = htmlTabelTagasta(4, 4);
-echo $tabel1;
-echo '<hr>';
 
 // html lehe lõpp
 echo '
