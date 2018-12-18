@@ -60,7 +60,7 @@ function suguVordlus($a, $b){
         return 0;
     }return($a['sugu'] < $b['sugu']) ? -1 : 1;
 }
-//seda ei ole tegelikult üldse vaja
+//seda ei ole tegelikult üldse vaja, vist
 function sortSooJargi ($massiiv){
     usort($massiiv,'suguVordlus');
 }
