@@ -28,7 +28,7 @@ if(empty($_POST)){
 } else {
     session_destroy(); // lõpetan veateate sessiooni
     session_start(); //alustan sisselogitud kasutaja sessiooni
-    session_regenerate_id(); // sessioonile uue id genereerimine/määramine
+    //session_regenerate_id(); // sessioonile uue id genereerimine/määramine
 
     echo session_id();
     $_SESSION['username'] = $_POST['username'];
