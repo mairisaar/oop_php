@@ -38,5 +38,7 @@ if(empty($_POST)){
     echo '</pre>';
     echo 'Sisselogimine õnnestus! Sinu kasutajanimi on '.$_SESSION['username'];
     echo '<br>';
+    echo '<a href="test.php">Mine test lehele</a>';
+    echo '<br>';
     echo '<a href="logout.php">Logi välja</a>';
 }
